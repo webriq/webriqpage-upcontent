@@ -1,0 +1,17 @@
+include _layouts/header
+
+body#page-top
+
+    nav#mainNav.navbar.navbar-default.navbar-fixed-top
+     include ./_layouts/menu
+
+    div.main
+        include _layouts/slider
+
+    div.main-container
+        block content
+
+    div.footer
+        include _layouts/footer
+
+<script src="../js/color-switcher.js"></script>

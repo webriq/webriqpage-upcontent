@@ -1,0 +1,24 @@
+a, .navbar-default.affix .navbar-header .navbar-brand, .navbar-default .nav > li.active>a, .navbar-default .nav>li.active>a:focus, .navbar-default.affix .nav > li>a:hover, .navbar-default.affix .nav>li>a:focus:hover, .navbar-default.affix .navbar-header .navbar-brand:hover, .navbar-default.affix .navbar-header .navbar-brand:focus, .navbar-default .nav > li>a:hover, .navbar-default .nav>li>a:focus:hover ,.text-primary{
+  color: #eeb313;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary{
+  background-color: #E0A811;
+}
+
+.portfolio-box .portfolio-box-caption{
+  background-color: rgba(238, 179, 19, 0.8);
+
+}
+ 
+hr{
+  border-color: #eeb313;
+}
+ 
+.btn-primary, .bg-primary {
+  background-color: #eeb313;
+} 
+
+a:hover, a:focus{
+  color: #E0A811;
+}

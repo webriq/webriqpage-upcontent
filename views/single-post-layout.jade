@@ -1,0 +1,23 @@
+include _layouts/header
+
+body#page-top.main
+
+    nav#mainNav.navbar.navbar-default.navbar-fixed-top
+      include _layouts/menu
+
+    header
+
+    div.container
+      .row
+        block content
+            each post in site.views.posts.all()
+                div.list
+                  
+                    h4= post.title
+                  date= post.date
+          
+    div.footer
+        include _layouts/footer
+          
+ 
+
