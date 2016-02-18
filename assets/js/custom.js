@@ -12,6 +12,9 @@ $(function() {
 
 $(document).ready(function(){
 
+  // Add parallax effect to background image
+  $('#cbp-bislideshow li').parallax("0%", 0.2);
+    
   $('.olx-carousel').olxCarousel({
     items:1,
     lazyLoad:true,
