@@ -19,7 +19,10 @@ $(document).ready(function(){
     items:1,
     lazyLoad:true,
     loop:true,
-    margin:10
+    margin:10,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+
   });
 
 })

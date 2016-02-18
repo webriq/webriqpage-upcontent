@@ -16,6 +16,9 @@ a:hover, a:focus
 .team-box.text-center img
   margin:0px auto;
 
+.team-box.text-center p strong
+  color: blue-darken-1
+
 section
   background-color:#fff;
 
@@ -31,6 +34,16 @@ section
 .navbar-default.affix .navbar-header .navbar-brand:hover, .navbar-default.affix .navbar-header .navbar-brand:focus,
 .navbar-default .nav > li>a:hover, .navbar-default .nav>li>a:focus:hover
   color: blue-darken-1
+
+#bs-example-navbar-collapse-1 > ul
+  margin-top:0px
+  margin-bottom:0px
+
+#bs-example-navbar-collapse-1 > ul > li
+  @media (max-width:767px)
+    border-bottom: 1px solid #F6F6F6
+    box-shadow: 0px 0px 3px -1px #ddd
+    -webkit-box-shadow: 0px 0px 3px -1px #F1F1F1
 
 .bg-primary
   background-color: light-blue
@@ -58,7 +71,7 @@ hr
 
 body.main header 
   min-height: 30%;
-  background-image: url(/img/header3.jpg);
+  background-image: url(../img/header3.jpg);
   background-position: top;
   background-repeat:no-repeat;
 
@@ -66,6 +79,46 @@ body.main .content h2.title
   border-bottom:1px solid #dfdfdf
   padding-bottom:10px
   margin-bottom:20px
+  font-weight:600
+
+body.main .content h2.title strong
+  color: light-blue
+  font-weight:600
+ 
+body.main .addthis_sharing_toolbox 
+  clear:both
+
+
+#panel
+  padding:0px
+  position:fixed
+  width:250px
+  z-index:1
+
+  @media (max-width:767px)
+    position:relative
+    width:100%
+
+
+#panel .list-group-item:first-child
+  background-color:blue-darken-1
+  color:#fff
+
+#panel .list-group-item:first-child h4
+  margin:5px auto
+
+section#our-prices
+  background-color:#f7f7f7
+
+#contact
+  background-color:#222;
+  color:#fff;
+
+#contact hr
+  border-color:#fff
+
+#contact a
+  color:#fff
 
 // Blog
 
@@ -94,5 +147,18 @@ body.main .content h2.title
 .main .blog .blog-list .list a
   color:#212121
 
+@media (min-width: 768px)
+  .container
+    width:auto
+    max-width:1170px
 
- 
+
+@media (max-width:680px)
+  body .main
+    padding:0px;
+
+  body .main header
+    padding:50px 0px;
+
+  header .header-content
+    padding:100px 15px 0px 15px;
