@@ -43,11 +43,11 @@
     right: -40px;
     top: 0;
     width: 40px;
-    padding: 6px 5px 6px 0px;
     text-align:center;
 }
 #color-style-switcher .bottom a.settings .fa{
     color:#fff !important;
+    line-height:1.5;
 }
 #color-style-switcher select {
     background: none repeat scroll 0 0 #F6F6F6;
