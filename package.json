@@ -1,6 +1,6 @@
 {
-  "name": "static-portfolio",
-  "description": "static portfolio",
+  "name": "simple-landing-page",
+  "description": "simple landing page",
   "dependencies": {
     "autoprefixer-stylus": "0.8.x",
     "axis": "0.5.x",
@@ -12,8 +12,8 @@
     "js-pipeline": "0.2.x",
     "jstransformer-marked": "^1.0.0",
     "marked": "0.3.x",
+    "roots": "^4.0.0",
     "rupture": "0.6.x",
-    "stylus": "0.52.x",
-    "roots": "4.0.0"
+    "stylus": "0.52.x"
   }
 }
