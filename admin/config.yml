@@ -1,0 +1,148 @@
+backend:
+  name: netlify-api
+  url: http://localhost:8080
+
+production:
+  backend:
+    name: github-api
+    repo: ayenzky/Landing-Page-Template # Path to your Github repository
+    branch: cms # Branch to update (master by default)
+
+media_folder: "assets/img/uploads" # Folder where user uploaded files should go
+public_folder: "assets"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "sitedata"
+    label: "Site Information"
+    files:
+      - name: "sitedata"
+        label: "Site Information"
+        file: "data/site.json"
+        description: "Edit site information"
+        fields:
+          - name: "sitedata"
+            label: "Site Information"
+            widget: "list"
+            fields:
+              - {label: "Logo", name: "sitelogo", widget: "image", media_folder: "assets/img"}
+              - {label: "Favicon", name: "icon", widget: "image", media_folder: "assets/img"}
+              - {label: "Website Name", name: "sitename", widget: "string"}
+              - {label: "Author", name: "siteauthor", widget: "string"}
+              - {label: "Description", name: "sitedesc", widget: "string"}
+              - {label: "Keywords", name: "keywords", widget: "string"}
+  - name: "result"
+    label: "Menu"
+    files:
+      - name: "menuheader"
+        label: "Menu"
+        file: "data/menu.json"
+        description: "Here you can edit your menu items"
+        fields:
+          - name: "result"
+            label: "Menu"
+            widget: "list"
+            fields:
+              - {label: "Content", name: "html", widget: "markdown"}
+  - name: "slides"
+    label: "Slider"
+    files:
+      - name: "slidertexts"
+        label: "Slider Text"
+        file: "data/slidertext.json"
+        description: "Edit the text on image slider"
+        fields:
+          - name: "slides"
+            label: "Slider Text"
+            widget: "list"
+            fields:
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Anchor Link", name: "anchorlink", widget: "markdown"}
+      - name: "sliders"
+        label: "Image Slider"
+        file: "data/slider.json"
+        description: "Change or add images for slider"
+        fields:
+          - name: "slides"
+            label: "Image Slider"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
+              - {label: "Image Name", name: "imagename", widget: "string"}
+  - name: "data"
+    label: "Sections"
+    files:
+      - name: "getstarteds"
+        label: "Get Started"
+        file: "data/getstarted.json"
+        description: "You can edit your text here"
+        fields:
+          - label: "Get Started"
+            name: "data"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string", tagname: "h2"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Anchor Link", name: "anchorlink", widget: "markdown"}
+      - name: "offers"
+        label: "Services"
+        file: "data/offers.json"
+        description: "You can edit your text here"
+        fields:
+          - label: "Offers"
+            name: "data"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
+              - {label: "Description", name: "description", widget: "string"}
+      - name: "statusbars"
+        label: "Status Counter"
+        file: "data/statusbar.json"
+        description: "You can edit your text here"
+        fields:
+          - label: "Status Counter"
+            name: "data"
+            widget: "list"
+            fields:
+              - {label: "Content", name: "html", widget: "markdown"}
+      - name: "ourteams"
+        label: "Our Team"
+        file: "data/ourteams.json"
+        description: "You can edit your text here"
+        fields:
+          - label: "Our Team"
+            name: "data"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+      - name: "prices"
+        label: "Our Prices"
+        file: "data/prices.json"
+        description: "You can edit your text here"
+        fields:
+          - label: "Our Prices"
+            name: "data"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Cols-1", name: "cols1", widget: "markdown"}
+              - {label: "Cols-2", name: "cols2", widget: "markdown"}
+              - {label: "Cols-3", name: "cols3", widget: "markdown"}
+      - name: "contacts"
+        label: "Contact Us"
+        file: "data/contact.json"
+        description: "You can edit your text here"
+        fields:
+          - label: "Contact Us"
+            name: "data"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Content", name: "contents", widget: "markdown"}
+

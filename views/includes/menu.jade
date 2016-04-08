@@ -1,0 +1,12 @@
+.container
+	.navbar-header
+		button.navbar-toggle.collapsed(data-target='#bs-example-navbar-collapse-1', data-toggle='collapse', type='button')
+			span.sr-only Toggle navigation
+			span.icon-bar
+			span.icon-bar
+			span.icon-bar
+		a.navbar-brand.page-scroll(href='#page-top')
+			img(src= records.site.sitedata[0].sitelogo)
+	each menus in records.menu.result
+		!= menus.html
+
