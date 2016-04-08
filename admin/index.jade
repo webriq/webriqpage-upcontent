@@ -23,6 +23,9 @@ html
       body.ember-application .cms-preview-pane {
         background: #fff;
       }
+      .cms.cms-navbar-top.cms-text .cms.cms-inline-list li:first-child{
+        display:none;
+        }
     script!= "CMS_ENV = \"" + (process.env.CMS_ENV || "development") + "\";"
 
     base(href="/admin/")
