@@ -120,7 +120,9 @@ aside {
 .navbar-default .nav>li.active>a:focus:hover {
     background-color: transparent;
 }
-
+.navbar-brand>img{
+  margin-top:4px;
+}
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
@@ -187,7 +189,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-   
+
 }
 
 header .header-content {

@@ -24,8 +24,8 @@ collections: # A list of collections the CMS should be able to edit
             label: "Site Information"
             widget: "list"
             fields:
-              - {label: "Logo", name: "sitelogo", widget: "markdown"}
-              - {label: "Favicon", name: "icon", widget: "image"}
+              - {label: "Logo", name: "sitelogo", widget: "image", media_folder: "assets/img"}
+              - {label: "Favicon", name: "icon", widget: "image", media_folder: "assets/img"}
               - {label: "Website Name", name: "sitename", widget: "string"}
               - {label: "Author", name: "siteauthor", widget: "string"}
               - {label: "Description", name: "sitedesc", widget: "string"}
