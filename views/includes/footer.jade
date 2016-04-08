@@ -1,0 +1,74 @@
+//- #footer-wrapper
+//-   section#footer.container
+//-     .row
+//-       .8u
+//-         section
+//-           header
+//-             h2 More Episodes
+//-           ul.dates
+//-             each post in posts.orderBy('date','desc').slice(2,8)
+//-               li
+//-                 span.date
+//-                   != dateFormat(post.date, "MMM [<strong>]D[</strong>]")
+//-                 h3
+//-                   a(href=post.permalink)= post.title
+//-                 p= post.shortdesc
+//-       .4u
+//-         section
+//-           header
+//-             h2 What's this all about?
+//-           a.image.featured(href="#")
+//-             img(src= records.site.banner)
+//-           p= records.site.description
+//-     .row
+//-       .12u
+//-         #copyright
+//-           ul.links
+//-             li
+//-               | &copy;
+//-               = records.site.name
+//-               |  All rights reserved.
+//-             li Design:
+//-               a(href="http://html5up.net") HTML5 UP
+
+section#contact
+  div.container
+    - each contacts in records.contact.data
+      div.row
+        div.col-lg-8.col-lg-offset-2.text-center
+          h2.section-heading= contacts.title
+          hr.primary
+          p= contacts.description
+        != contacts.contents
+
+        //- div.col-lg-4.col-lg-offset-2.text-center
+        //-   i.fa.fa-phone.fa-3x.wow.bounceIn
+        //-   p 123-456-6789
+
+        //- div.col-lg-4.text-center
+        //-   i(class="fa fa-envelope-o fa-3x wow bounceIn", data-wow-delay=".1s")
+        //-   p
+        //-     a(href="mailto:info@webriq.com") info@webriq.com
+
+  != js()
+  <!-- jQuery -->
+  script(src="../js/jquery.js")
+  script(src="../js/modernizr.custom.js")
+  <!-- Bootstrap Core JavaScript -->
+  script(src="../js/bootstrap.min.js")
+
+  <!-- Plugin JavaScript -->
+
+  script(src="../js/jquery.easing.min.js")
+  script(src="../js/jquery.countTo.js")
+  script(src="../js/jquery.fittext.js")
+  script(src="../js/wow.min.js")
+
+
+  <!-- Custom Theme JavaScript -->
+  script(src="../js/jquery.imagesloaded.min.js")
+  script(src="../js/cbpBGSlideshow.min.js")
+  script(src="../js/owl.carousel.min.js")
+  script(src="//res.cloudinary.com/webriq-pte/raw/upload/v1417678832/js/parallax.js")
+  script(src="../js/creative.js")
+

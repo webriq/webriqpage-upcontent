@@ -1,17 +1,18 @@
-include _layouts/header
+include includes/header
 
 body#page-top
 
-    nav#mainNav.navbar.navbar-default.navbar-fixed-top
-     include ./_layouts/menu
+  nav#mainNav.navbar.navbar-default.navbar-fixed-top
+    include includes/menu
 
-    div.main
-        include _layouts/slider
+  div.main
+    include includes/widget-slider
 
-    div.main-container
-        block content
+  div.main-container
+    block content
 
-    div.footer
-        include _layouts/footer
+  div.footer
+    include includes/footer
+
 
 script(src="../js/color-switcher.js")

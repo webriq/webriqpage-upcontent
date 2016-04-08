@@ -1,0 +1,18 @@
+header
+  - each slidertxts in records.slidertext.slides
+    div.header-content
+      div.header-content-inner
+        h1= slidertxts.text
+        hr
+        p= slidertxts.description
+        != slidertxts.anchorlink
+
+ul#cbp-bislideshow.cbp-bislideshow
+  - each sliders in records.slider.slides
+    li
+      img(src= sliders.image, alt= sliders.imagename)
+
+div#cbp-bicontrols.cbp-bicontrols
+  span.cbp-biprev
+  span.cbp-bipause
+  span.cbp-binext

@@ -48,14 +48,17 @@
 
     new WOW().init();
 
+
+
 })(jQuery); // End of use strict
 
 $(document).ready(function(){
 
+
   cbpBGSlideshow.init();
   // Add parallax effect to background image
   $('#cbp-bislideshow li').parallax("0%", 0.2);
-    
+
   $('.olx-carousel').olxCarousel({
     items:1,
     lazyLoad:true,
@@ -66,7 +69,7 @@ $(document).ready(function(){
 
   });
 
-  
+
     $('.stat-number').countTo();
 
 
