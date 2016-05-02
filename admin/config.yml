@@ -30,6 +30,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Author", name: "siteauthor", widget: "string"}
               - {label: "Description", name: "sitedesc", widget: "string"}
               - {label: "Keywords", name: "keywords", widget: "string"}
+              - {label: "Google Analytics", name: "analytics", widget: "markdown"}
   - name: "result"
     label: "Menu"
     files:
