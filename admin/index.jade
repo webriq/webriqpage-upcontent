@@ -7,31 +7,45 @@ html
 
     link(rel="icon", href= records.site.sitedata[0].icon, type="image/png")
     link(rel="shortcut icon", href= records.site.sitedata[0].icon, type="img/x-icon")
-    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
-    link(rel="stylesheet", href="//cms.netlify.com/assets/cms.css")
-    link(rel="stylesheet", href="/css/skel.css")
+
+    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css")
+    link(rel="stylesheet", href="//cms.webriq.com/assets/cms.css")
+
     link(rel="stylesheet", href="/css/style.css")
-    link(rel="stylesheet", href="/css/style-desktop.css")
-    link(rel="stylesheet", href="/css/webriq-template.css")
 
 
-    style.
-      .container {
-        width: auto;
-        max-width: 1200px;
-      }
-      body.ember-application .cms-list-entry,
-      body.ember-application .cms-preview-pane {
-        background: #fff;
-      }
-      .cms.cms-navbar-top.cms-text .cms.cms-inline-list li:first-child{
-        display:none;
-        }
     script!= "CMS_ENV = \"" + (process.env.CMS_ENV || "development") + "\";"
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
 
     base(href="/admin/")
   body
 
-    script(src="//cms.netlify.com/assets/vendor.js")
-    script(src="//cms.netlify.com/assets/cms.js")
-    script(src="/js/custom-admin.js")
+    script(type="text/x-handlebars" data-template-name='cms/preview/sitedata').
+      <div id="main-wrapper">
+        <div class="container">
+
+          {{#cms-preview field="sitedata" as |sitedatas| }}
+            <section class="box">
+              <h1>Site Information</h1>
+              <hr>
+              <h5>Website Name:</h5>
+              <p>{{sitedatas.sitename}}</p>
+              <h5>Favicon icon:</h5>
+              <p>{{cms-preview field="icon" from=sitedatas}}</p>
+              <h5>Site Logo:</h5>
+              <p>{{cms-preview field="sitelogo" from=sitedatas}}</p>
+              <h5>Meta Description:</h5>
+              <p>{{sitedatas.sitedesc}}</p>
+              <h5>Meta Author:</h5>
+              <p>{{sitedatas.siteauthor}}</p>
+              <h5>Meta Keywords:</h5>
+              <p>{{sitedatas.keywords}}</p>
+            </section>
+          {{/cms-preview}}
+        </div>
+      </div>
+
+
+
+    script(src="//cms.webriq.com/assets/vendor.js")
+    script(src="//cms.webriq.com/assets/cms.js")
